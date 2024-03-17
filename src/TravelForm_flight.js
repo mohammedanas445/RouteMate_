@@ -1,42 +1,70 @@
 import React, { useState } from "react";
-import { AiOutlineSwap } from "react-icons/ai";
+// import Select from "react-select"
 
 const FlightTravelForm = () => {
-    const [fromCityName, setFromCityName] = useState("Hyderabad (HYD)")
-    const [toCityName, setToCityName] = useState("New Delhi (DEL)");
+    // const [fromCityName, setFromCityName] = useState("Hyderabad (HYD)")
+    // const [toCityName, setToCityName] = useState("New Delhi (DEL)");
     const [departureDate, setDepartureDate] = useState("11/03/2024");
 
 
-    const handleFromCityChange = (e) => {
-        setFromCityName(e.target.value);
-    };
+    // const handleFromCityChange = (e) => {
+    //     setFromCityName(e.target.value);
+    // };
 
-    const handleToCityChange = (e) => {
-        setToCityName(e.target.value);
-    };
+    // const handleToCityChange = (e) => {
+    //     setToCityName(e.target.value);
+    // };
 
     const handleDateChange = (e) => {
         setDepartureDate(e.target.value);
     };
 
     return ( 
-        <div className="TravelForm">
+        <div >
             <div className="form">
                 <div className="fromTo">
                     <div className="fromCity">
                         <p>From:</p>
                         <label htmlFor="fromCityName">
-                            <input type="text" id="fromCityName" value={fromCityName} onChange={handleFromCityChange}/>
+                        {/* <Select
+                            // className="pankaj-input"
+                            options={train_options}
+                            styles={{
+                            control: (baseStyles, state) => ({
+                                ...baseStyles,
+                                height: "60px",
+                                width: "clamp(100px, 30vw, 200px)",
+                                borderRadius: "10px",
+                                border: "1px solid #385de1",
+                                padding: " 10px",
+                                marginTop: "5px",
+                                fontSize: "15px",
+                            }),
+                            }}
+                        /> */}
                             <p id="airportName">Rajiv Gandhi Internatinal Airport</p>
                         </label>
                     </div>
-                    <AiOutlineSwap style={{
-                        cursor: 'pointer'
-                    }}/>
+                    
                     <div className="toCity">
                         <p>To:</p>
                         <label htmlFor="toCityName">
-                            <input type="text" id="toCityName" value={toCityName} onChange={handleToCityChange}/>
+                        {/* <Select
+                            // className="pankaj-input"
+                            options={train_options}
+                            styles={{
+                            control: (baseStyles, state) => ({
+                                ...baseStyles,
+                                height: "60px",
+                                width: "clamp(100px, 30vw, 200px)",
+                                borderRadius: "10px",
+                                border: "1px solid #385de1",
+                                padding: " 10px",
+                                marginTop: "5px",
+                                fontSize: "15px",
+                            }),
+                            }}
+                        /> */}
                             <p id="airportName">Indira Gandhi Internatinal Airport</p>
                         </label>
                     </div>
@@ -50,7 +78,7 @@ const FlightTravelForm = () => {
             </div>
 
             <div className="submit">
-                <button type="submit">Submit</button>
+                <button type="submit">Search</button>
             </div>
         </div>
      );

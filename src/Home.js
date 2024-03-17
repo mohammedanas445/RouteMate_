@@ -27,7 +27,7 @@ const Home = () => {
 
     
     return ( 
-        <div className="main">
+        <div className="TravelForm">
             <nav className="tabs">
                 <button onClick={() => {
                     handleFormChange("Flight")

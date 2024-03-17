@@ -7,10 +7,15 @@ import './navbar.css';
 const Navbar = () => {
     const [sidebar,setSidebar]= useState(false);
 
-    const showSidebar = () => setSidebar(!sidebar);
-
+    const showSidebar = () => {
+        setSidebar(!sidebar);
+        document.getElementsByClassName('TravelForm').style.filter = 'blur(5px)';
+        document.getElementsByClassName('Navbar').style.filter = 'blur(5px)';
+    }
     return ( 
         <div>
+
+        {sidebar?<div className='blur-background'></div>:null}
         <nav className="Navbar">
             {/* <img src="" alt="" className="logo" /> */}
             <p>RouteMate</p>
